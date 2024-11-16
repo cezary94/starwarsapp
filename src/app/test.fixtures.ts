@@ -1,3 +1,6 @@
+import { PersonResponse } from "./models/people";
+import { StarshipResponse } from "./models/starship";
+
 export const testStarship = {
     MGLT: "10 MGLT",
     cargo_capacity: "1000000000000",
@@ -97,3 +100,17 @@ export const testPerson2 = {
 	edited: "2014-12-20T21:17:50.309000Z",
 	url: "https://swapi.dev/api/people/2/"
 }
+
+export const mockPeopleResponse: PersonResponse = {
+    count: 82,
+    previous: '',
+    results: [testPerson],
+    next: 'https://swapi.dev/api/people?page=2',
+};
+
+export const mockStarshipsResponse: StarshipResponse = {
+    count: 82,
+    previous: '',
+    results: [testStarship],
+    next: 'https://swapi.dev/api/starships?page=2',
+};

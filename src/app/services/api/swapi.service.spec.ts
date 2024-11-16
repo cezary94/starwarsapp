@@ -3,7 +3,7 @@ import { provideHttpClientTesting, HttpTestingController } from '@angular/common
 import { SwapiService } from './swapi.service';
 import { Person, PersonResponse } from '../../models/people';
 import { Starship, StarshipResponse } from '../../models/starship';
-import { testPerson, testPerson2, testStarship, testStarship2 } from '../../test.fixtures';
+import { mockPeopleResponse, mockStarshipsResponse, testPerson, testPerson2, testStarship, testStarship2 } from '../../test.fixtures';
 import { provideHttpClient } from '@angular/common/http';
 
 describe('GameService', () => {
@@ -11,19 +11,6 @@ describe('GameService', () => {
   let httpMock: HttpTestingController;
 
   const mockApiUrl = 'https://swapi.dev/api';
-
-  const mockPeopleResponse: PersonResponse = {
-    count: 82,
-    previous: '',
-    results: [testPerson],
-    next: 'https://swapi.dev/api/people?page=2',
-  };
-  const mockStarshipsResponse: StarshipResponse = {
-    count: 82,
-    previous: '',
-    results: [testStarship],
-    next: 'https://swapi.dev/api/starships?page=2',
-  };
 
   beforeEach(() => {
     TestBed.configureTestingModule({
