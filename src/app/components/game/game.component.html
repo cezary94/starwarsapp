@@ -1,0 +1,22 @@
+<div class="result">
+    @if (winner) {
+        The winner is: {{ (winner === player.LEFT_SIDE) ? leftCard?.name : rightCard?.name }}
+    }
+    @else {
+        No winner this time!
+    }
+</div>
+<div class="cards-container">
+    <app-game-card
+        [card]="leftCard"
+        [isWinner]="winner === player.LEFT_SIDE"
+    ></app-game-card>
+
+    <app-game-card
+        [card]="rightCard"
+        [isWinner]="winner === player.RIGHT_SIDE"
+    ></app-game-card>
+</div>
+<button mat-raised-button (click)="newBattle()">
+    New game
+</button>

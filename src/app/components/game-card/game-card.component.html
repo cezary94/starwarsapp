@@ -1,0 +1,8 @@
+@if (card) {
+    <mat-card appearance="outlined" [class.is-winner]="isWinner">
+        <mat-card-header>{{ card.name }}</mat-card-header>
+        <mat-card-content>
+            {{ cardAttribute }}
+        </mat-card-content>
+    </mat-card>
+}

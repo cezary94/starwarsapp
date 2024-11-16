@@ -1,0 +1,23 @@
+.picker-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem auto;
+    gap: 5rem;
+
+    .mdc-button {
+        flex-direction: column;
+        padding: 10rem;
+        height: auto;
+        border-radius: 5px;
+        gap: 1rem;
+        font-size: 1.5rem;
+
+        .mat-icon {
+            margin: 0;
+            font-size: 4rem;
+            height: 4rem;
+            width: 4rem;
+        }
+    }
+}

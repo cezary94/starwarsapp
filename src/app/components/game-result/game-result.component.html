@@ -1,0 +1,7 @@
+<div class="score-container">
+    @for (scoreItem of score | keyvalue; track $index) {
+        <div class="score-item">
+            {{ scoreItem.key }}: {{ scoreItem.value }}
+        </div>
+    }
+</div>
