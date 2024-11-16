@@ -1,5 +1,5 @@
 <app-header></app-header>
-@if ((gameFacade.loadingAllPeople$ | async) && (gameFacade.loadingAllStarships$ | async)) {
+@if ((gameFacade.loadingAllPeople$ | async) || (gameFacade.loadingAllStarships$ | async)) {
     <app-loader></app-loader>
 }
 @else {
