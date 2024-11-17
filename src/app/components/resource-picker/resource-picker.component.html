@@ -1,10 +1,18 @@
 <div class="picker-container">
-    <button mat-raised-button (click)="selectResource.emit(resources.PEOPLE)">
+    <button 
+        mat-raised-button
+        data-cy="resource-picker-people"
+        (click)="selectResource.emit(resources.PEOPLE)"
+    >
         <mat-icon>people</mat-icon>
         People
     </button>
     
-    <button mat-raised-button (click)="selectResource.emit(resources.STARSHIPS)">
+    <button 
+        mat-raised-button
+        data-cy="resource-picker-starships"
+        (click)="selectResource.emit(resources.STARSHIPS)"
+    >
         <mat-icon>rocket_launch</mat-icon>
         Starships
     </button>

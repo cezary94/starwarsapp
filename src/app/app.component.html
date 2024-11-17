@@ -1,6 +1,6 @@
 <app-header></app-header>
 @if ((gameFacade.loadingAllPeople$ | async) || (gameFacade.loadingAllStarships$ | async)) {
-    <app-loader></app-loader>
+    <app-loader data-cy="app-loader"></app-loader>
 }
 @else {
     <div class="game-container">
@@ -9,6 +9,7 @@
         ></app-game-result>
         @if (selectedResource) {
             <app-game
+                data-cy="app-game"
                 [selectedResource]="selectedResource"
                 [resourceList]="selectedResource === resources.PEOPLE ? (gameFacade.allPeople$ | async) : (gameFacade.allStarships$ | async)"
                 (onNewBattle)="newBattle()"
@@ -17,6 +18,7 @@
         }
         @else {
             <app-resource-picker
+                data-cy="app-resource-picker"
                 (selectResource)="onSelectResource($event)"
             ></app-resource-picker>
         }

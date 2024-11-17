@@ -1,4 +1,4 @@
-<div class="result">
+<div class="result" data-cy="result">
     @if (winner) {
         The winner is: {{ (winner === player.LEFT_SIDE) ? leftCard?.name : rightCard?.name }}
     }
@@ -8,15 +8,21 @@
 </div>
 <div class="cards-container">
     <app-game-card
+        data-cy="app-game-card"
         [card]="leftCard"
         [isWinner]="winner === player.LEFT_SIDE"
     ></app-game-card>
 
     <app-game-card
+        data-cy="app-game-card"
         [card]="rightCard"
         [isWinner]="winner === player.RIGHT_SIDE"
     ></app-game-card>
 </div>
-<button mat-raised-button (click)="newBattle()">
+<button 
+    mat-raised-button
+    (click)="newBattle()"
+    data-cy="new-game-button"
+>
     New game
 </button>
